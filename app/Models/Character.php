@@ -42,6 +42,11 @@ class Character extends Model
         return $this->hasMany(Inventory::class);
     }
 
+    public function skills(): HasMany
+    {
+        return $this->hasMany(Skill::class);
+    }
+
     /**
      * Get final stat including racial bonuses.
      */
