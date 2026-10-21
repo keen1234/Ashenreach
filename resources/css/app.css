@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+    --color-obsidian: #0E0E0E;
+    --color-coal: #171717;
+    --color-iron: #262626;
+    --color-stone: #404040;
+    --color-silver: #A3A3A3;
+    --color-bone: #E5E5E5;
+    --color-gold: #C9A24D;
+    --color-gold-light: #DFBE72;
+    --color-moss: #5FA05A;
+    --color-blood: #B8473F;
+    --color-heart: #D9748A;
+    --color-focus: #5383C3;
+}
+
+body {
+    background-color: var(--color-obsidian);
+    color: var(--color-bone);
+    font-family: 'Inter', sans-serif;
+}

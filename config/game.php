@@ -1,0 +1,106 @@
+<?php
+
+return [
+    'races' => [
+        'human' => [
+            'name' => 'Human',
+            'description' => '+1 to all stats. 5% faster skill XP.',
+            'bonuses' => [
+                'strength' => 1,
+                'dexterity' => 1,
+                'constitution' => 1,
+                'intelligence' => 1,
+                'wisdom' => 1,
+                'charisma' => 1,
+            ],
+            'perk' => 'skill_xp_multiplier',
+            'perk_value' => 1.05,
+        ],
+        'elf' => [
+            'name' => 'Elf',
+            'description' => '+2 DEX, +1 INT, -1 CON. Archery and herbalism bonus.',
+            'bonuses' => [
+                'strength' => 0,
+                'dexterity' => 2,
+                'constitution' => -1,
+                'intelligence' => 1,
+                'wisdom' => 0,
+                'charisma' => 0,
+            ],
+            'perk' => 'archery_herbalism_bonus',
+            'perk_value' => 1.10,
+        ],
+        'dwarf' => [
+            'name' => 'Dwarf',
+            'description' => '+2 CON, +1 STR, -1 CHA. Mining and smithing bonus.',
+            'bonuses' => [
+                'strength' => 1,
+                'dexterity' => 0,
+                'constitution' => 2,
+                'intelligence' => 0,
+                'wisdom' => 0,
+                'charisma' => -1,
+            ],
+            'perk' => 'mining_smithing_bonus',
+            'perk_value' => 1.10,
+        ],
+        'orc' => [
+            'name' => 'Orc',
+            'description' => '+2 STR, +1 CON, -1 INT. Combat bonus, cheaper healing.',
+            'bonuses' => [
+                'strength' => 2,
+                'dexterity' => 0,
+                'constitution' => 1,
+                'intelligence' => -1,
+                'wisdom' => 0,
+                'charisma' => 0,
+            ],
+            'perk' => 'combat_healing_bonus',
+            'perk_value' => 1.10,
+        ],
+        'halfling' => [
+            'name' => 'Halfling',
+            'description' => '+2 DEX, +1 CHA, -1 STR. Luckier on risky jobs.',
+            'bonuses' => [
+                'strength' => -1,
+                'dexterity' => 2,
+                'constitution' => 0,
+                'intelligence' => 0,
+                'wisdom' => 0,
+                'charisma' => 1,
+            ],
+            'perk' => 'risky_job_luck',
+            'perk_value' => 1.10,
+        ],
+        'tiefling' => [
+            'name' => 'Tiefling',
+            'description' => '+2 CHA, +1 INT, -1 WIS. Cheaper black market.',
+            'bonuses' => [
+                'strength' => 0,
+                'dexterity' => 0,
+                'constitution' => 0,
+                'intelligence' => 1,
+                'wisdom' => -1,
+                'charisma' => 2,
+            ],
+            'perk' => 'black_market_discount',
+            'perk_value' => 0.90,
+        ],
+    ],
+
+    'point_buy' => [
+        'min_stat' => 8,
+        'max_stat' => 15,
+        'total_points' => 27,
+        'costs' => [
+            8 => 0,
+            9 => 1,
+            10 => 2,
+            11 => 3,
+            12 => 4,
+            13 => 5,
+            14 => 7,
+            15 => 9,
+        ],
+    ],
+];
