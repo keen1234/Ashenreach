@@ -6,7 +6,7 @@ Route::get('/', function () {
     if (auth()->check()) {
         return redirect()->route('dashboard');
     }
-    return view('auth.login');
+    return view('pages.auth.login');
 })->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
