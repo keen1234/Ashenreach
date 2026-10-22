@@ -25,10 +25,10 @@ RUN composer install --no-dev --optimize-autoloader
 RUN npm install
 RUN npm run build
 
-RUN mkdir -p /app/database
+RUN mkdir -p /app/database /app/storage/framework/sessions /app/storage/framework/views /app/storage/framework/cache /app/storage/logs
 RUN touch /app/database/database.sqlite
 RUN chmod -R 777 /app/storage /app/bootstrap/cache /app/database
 
 EXPOSE 8000
 
-CMD php artisan config:cache && php artisan route:cache && php artisan migrate --force && php -S 0.0.0.0:$PORT -t public
+CMD php artisan config:clear && php artisan cache:clear && php artisan migrate --force && php -S 0.0.0.0:$PORT -t public
