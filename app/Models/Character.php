@@ -47,6 +47,11 @@ class Character extends Model
         return $this->hasMany(Skill::class);
     }
 
+    public function quests(): HasMany
+    {
+        return $this->hasMany(Quest::class);
+    }
+
     /**
      * Get final stat including racial bonuses.
      */
