@@ -1,16 +1,17 @@
-<x-layouts::auth :title="__('Log in to your account')">
-    <div class="flex flex-col gap-6">
-        <div class="flex w-full flex-col text-center">
-            <div class="mb-4 flex h-20 w-20 items-center justify-center rounded-full border-2 border-gold bg-coal mx-auto">
-                <flux:icon name="flame" class="size-10 text-blood" />
-            </div>
-            <flux:heading size="xl" level="1">{{ __('Ashenreach') }}</flux:heading>
-            <flux:subheading>{{ __('Log in to your account') }}</flux:subheading>
-        </div>
+@php
+    $title = __('Log in to Ashenreach');
+@endphp
 
-        <p class="text-sm text-silver text-center -mt-4">
-            {{ __('Enter your email and password below to log in to the kingdom.') }}
-        </p>
+<x-layouts.auth :title="$title">
+    <div class="flex flex-col gap-6">
+        <!-- Game Branding Header -->
+        <div class="flex flex-col items-center text-center gap-2">
+            <div class="flex h-12 w-12 items-center justify-center rounded-xl bg-coal border border-iron text-gold shadow-lg">
+                <flux:icon.fire class="size-7" />
+            </div>
+            <flux:heading size="xl" level="1" class="text-bone font-bold tracking-wider">ASHENREACH</flux:heading>
+            <flux:subheading class="text-silver">Enter the realm, spend your bars, and claim your destiny.</flux:subheading>
+        </div>
 
         <!-- Session Status -->
         <x-auth-session-status class="text-center" :status="session('status')" />
@@ -29,7 +30,7 @@
                 required
                 autofocus
                 autocomplete="email"
-                placeholder="email@example.com"
+                placeholder="peasant@ashenreach.test"
             />
 
             <!-- Password -->
@@ -45,8 +46,8 @@
                 />
 
                 @if (Route::has('password.request'))
-                    <flux:link class="absolute top-0 text-sm end-0" :href="route('password.request')" wire:navigate>
-                        {{ __('Forgot your password?') }}
+                    <flux:link class="absolute top-0 text-sm end-0 text-gold hover:underline" :href="route('password.request')" wire:navigate>
+                        {{ __('Forgot password?') }}
                     </flux:link>
                 @endif
             </div>
@@ -55,16 +56,19 @@
             <flux:checkbox name="remember" :label="__('Remember me')" :checked="old('remember')" />
 
             <div class="flex items-center justify-end">
-                <flux:button variant="primary" type="submit" class="w-full" data-test="login-button">
-                    {{ __('Log in') }}
+                <flux:button variant="primary" type="submit" class="w-full bg-gold text-obsidian font-semibold hover:bg-gold-light" data-test="login-button">
+                    {{ __('Enter Kingdom') }}
                 </flux:button>
             </div>
         </form>
 
-        <div class="text-center">
-            <flux:link :href="route('register')" wire:navigate>
-                {{ __('Don\'t have an account?') }}
-            </flux:link>
-        </div>
+        @if (Route::has('register'))
+            <div class="space-x-1 text-center text-sm text-silver">
+                <span>{{ __('New to the realm?') }}</span>
+                <flux:link :href="route('register')" class="text-gold hover:underline font-medium" wire:navigate>
+                    {{ __('Create character') }}
+                </flux:link>
+            </div>
+        @endif
     </div>
-</x-layouts::auth>
+</x-layouts.auth>
