@@ -31,4 +31,4 @@ RUN chmod -R 777 /app/storage /app/bootstrap/cache /app/database
 
 EXPOSE 8000
 
-CMD php artisan config:cache && php artisan route:cache && php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=$PORT
+CMD php artisan config:cache && php artisan route:cache && php artisan migrate --force && php -S 0.0.0.0:$PORT -t public
