@@ -13,10 +13,89 @@
     --color-blood: #B8473F;
     --color-heart: #D9748A;
     --color-focus: #5383C3;
+
+    --font-display: 'Cinzel', serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
 }
 
 body {
     background-color: var(--color-obsidian);
     color: var(--color-bone);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
+}
+
+/* Auth Page Specifics */
+.auth-body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-top {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    align-items: center;
+}
+
+.auth-shell {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+.auth-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;
+    width: 100%;
+    gap: 4rem;
+}
+
+.auth-brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.auth-brand__headline {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    line-height: 1.1;
+    margin: 1rem 0;
+}
+
+.auth-brand__headline em {
+    color: var(--color-gold);
+    font-style: normal;
+}
+
+.auth-form {
+    background: var(--color-coal);
+    border: 1px solid var(--color-iron);
+    padding: 2.5rem;
+    border-radius: 1rem;
+}
+
+.auth-input {
+    width: 100%;
+    background: var(--color-obsidian);
+    border: 1px solid var(--color-iron);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    color: var(--color-bone);
+}
+
+.auth-btn--primary {
+    width: 100%;
+    background: linear-gradient(to right, var(--color-gold), var(--color-gold-light));
+    color: var(--color-obsidian);
+    padding: 0.875rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
