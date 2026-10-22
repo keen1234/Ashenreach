@@ -2,7 +2,7 @@
     $title = __('Log in to Ashenreach');
 @endphp
 
-<x-layouts.auth :title="$title">
+<x-layouts.auth.simple :title="$title">
     <div class="flex flex-col gap-6">
         <!-- Game Branding Header -->
         <div class="flex flex-col items-center text-center gap-2">
@@ -71,4 +71,4 @@
             </div>
         @endif
     </div>
-</x-layouts.auth>
+</x-layouts.auth.simple>
