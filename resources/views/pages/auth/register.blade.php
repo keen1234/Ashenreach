@@ -11,11 +11,6 @@
 </head>
 <body class="auth-body">
 
-    <header class="auth-top">
-        <span class="text-sm font-semibold text-silver"><b>02</b> Register</span>
-        <span class="text-sm text-silver">Ashenreach — Create Character</span>
-    </header>
-
     <div class="auth-shell">
         <div class="auth-split">
             <!-- Brand column -->

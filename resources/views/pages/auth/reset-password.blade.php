@@ -12,11 +12,6 @@
 </head>
 <body class="auth-body">
 
-    <header class="auth-top justify-between">
-        <span class="text-sm font-semibold text-silver"><b>03</b> Recovery</span>
-        <span class="text-sm text-silver">Ashenreach <span class="text-gold mx-2">—</span> Restore your name</span>
-    </header>
-
     <div class="auth-shell">
         <div class="auth-split">
             <section class="auth-brand" aria-labelledby="brand-headline">
