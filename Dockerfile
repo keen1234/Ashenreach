@@ -29,6 +29,8 @@ RUN mkdir -p /app/database /app/storage/framework/sessions /app/storage/framewor
 RUN touch /app/database/database.sqlite
 RUN chmod -R 777 /app/storage /app/bootstrap/cache /app/database
 
+ENV APP_ENV=production
+
 EXPOSE 8000
 
 CMD php artisan config:cache && php artisan route:cache && php artisan migrate --force && php -S 0.0.0.0:$PORT -t public

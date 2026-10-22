@@ -11,18 +11,17 @@
 </head>
 <body class="auth-body">
 
-    <header class="auth-top">
-        <span class="text-sm font-semibold text-silver"><b>01</b> Login</span>
-        <span class="text-sm text-silver">Ashenreach — Return to the Ashes</span>
-    </header>
-
     <div class="auth-shell">
         <div class="auth-split">
             <!-- Brand column -->
             <section class="auth-brand">
                 <div class="flex flex-col gap-3">
                     <div class="w-20 h-20 bg-iron rounded-2xl border border-gold flex items-center justify-center">
-                         <svg class="w-10 h-10 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <img
+                            src="{{ Vite::asset('resources/assets/assets_ashen-roundel.png') }}"
+                            alt="Ashenreach roundel"
+                            class="w-16 h-16 rounded-full object-contain"
+                        />
                     </div>
                     <span class="font-display text-sm tracking-[0.24em] uppercase text-silver">Ashenreach</span>
                 </div>

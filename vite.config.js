@@ -10,6 +10,7 @@ export default defineConfig({
                 'resources/css/app.css',
                 'resources/js/app.js',
                 'resources/js/passkeys.js',
+                'resources/assets/assets_ashen-roundel.png',
             ],
             refresh: true,
             fonts: [
